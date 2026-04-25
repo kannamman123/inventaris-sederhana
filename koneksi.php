@@ -1,7 +1,7 @@
 <?php
 $host     = "localhost";
-$user     = "root"; // Sesuaikan dengan username database Anda
-$password = "";     // Sesuaikan dengan password database Anda (biasanya kosong di XAMPP)
+$user     = "root"; 
+$password = "";     
 $db       = "pkl-inventaris";
 
 $koneksi = mysqli_connect($host, $user, $password, $db);

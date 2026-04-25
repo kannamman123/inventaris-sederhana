@@ -2,7 +2,7 @@
 session_start();
 include 'koneksi.php';
 
-// Jika user sudah login, langsung arahkan ke halaman utama
+
 if (isset($_SESSION['login'])) {
     header("Location: index.php");
     exit;
@@ -10,9 +10,9 @@ if (isset($_SESSION['login'])) {
 
 if (isset($_POST['login'])) {
     $username = trim($_POST['username']);
-    $password = md5(trim($_POST['password'])); // Enkripsi input untuk dicocokkan dengan DB
+    $password = md5(trim($_POST['password'])); 
 
-    // Cek data di database
+    
     $query = "SELECT * FROM users WHERE username = ? AND password = ?";
     $stmt = mysqli_prepare($koneksi, $query);
     mysqli_stmt_bind_param($stmt, "ss", $username, $password);
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
     $result = mysqli_stmt_get_result($stmt);
 
     if (mysqli_num_rows($result) === 1) {
-        // Set session jika berhasil
+        
         $_SESSION['login'] = true;
         $_SESSION['username'] = $username;
         header("Location: index.php");

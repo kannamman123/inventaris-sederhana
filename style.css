@@ -1,4 +1,4 @@
-/* --- Mengatur Ulang Standar Bawaan Browser --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     padding: 20px;
 }
 
-/* --- Wadah Utama (Container) --- */
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -31,7 +31,7 @@ h2 {
     display: inline-block;
 }
 
-/* --- Pengaturan Tombol --- */
+
 .btn {
     display: inline-block;
     padding: 8px 12px;
@@ -63,7 +63,7 @@ h2 {
 .btn-reset { background-color: #95a5a6; color: white; }
 .btn-reset:hover { background-color: #7f8c8d; }
 
-/* --- Form Pencarian --- */
+
 .search-form {
     display: flex;
     gap: 10px;
@@ -78,7 +78,7 @@ h2 {
     font-size: 14px;
 }
 
-/* --- Pengaturan Tabel --- */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -102,7 +102,7 @@ tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-/* --- Pengaturan Form (Tambah/Edit) --- */
+
 .form-group {
     margin-bottom: 15px;
 }

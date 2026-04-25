@@ -5,7 +5,7 @@ if (!isset($_SESSION['login'])) {
     header("Location: login.php");
     exit;
 }
-// ... (lanjutan kode include 'koneksi.php' dan seterusnya tetap di bawah ini)
+
 include 'koneksi.php';
 
 if(isset($_GET['id'])){

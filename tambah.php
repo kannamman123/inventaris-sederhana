@@ -1,6 +1,6 @@
 <?php 
 session_start();
-// Proteksi agar hanya yang sudah login yang bisa akses
+
 if (!isset($_SESSION['login'])) {
     header("Location: login.php");
     exit;
@@ -8,13 +8,13 @@ if (!isset($_SESSION['login'])) {
 
 include 'koneksi.php'; 
 
-// Proses jika form di-submit
+
 if(isset($_POST['submit'])){
     $nama_barang = trim($_POST['nama_barang']);
     $stok = trim($_POST['stok']);
     $kategori_id = trim($_POST['kategori_id']);
 
-    // Validasi input tidak boleh kosong
+ 
     if(empty($nama_barang) || $stok === "" || empty($kategori_id)) {
         $error = "Semua kolom wajib diisi!";
     } else {
@@ -55,7 +55,6 @@ if(isset($_POST['submit'])){
                 <select name="kategori_id" required>
                     <option value="">-- Pilih Kategori --</option>
                     <?php
-                    // INI BAGIAN YANG HILANG: Mengambil data kategori untuk dropdown dinamis
                     $q_kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY nama_kategori ASC");
                     while($kat = mysqli_fetch_assoc($q_kategori)) {
                         echo "<option value='{$kat['id']}'>{$kat['nama_kategori']}</option>";
